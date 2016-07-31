@@ -10,8 +10,8 @@
 
     <properties>
         <dropwizard.version>0.9.1</dropwizard.version>
-        <dropwizard.hubspot.version>0.7.0.2</dropwizard.hubspot.version>
-        <guice.version>3.0</guice.version>
+        <dropwizard.hubspot.version>0.8.4.0</dropwizard.hubspot.version>
+        <guice.version>4.0</guice.version>
     </properties>
 
     <dependencies>
@@ -28,11 +28,10 @@
             <version>${dropwizard.version}</version>
         </dependency>
 		<dependency>
-		<!-- dropwizard guice extension -->
-            <groupId>com.hubspot.dropwizard</groupId>
-            <artifactId>dropwizard-guice</artifactId>
-            <version>${dropwizard.hubspot.version}</version>
-        </dependency>
+		    <groupId>com.hubspot.dropwizard</groupId>
+		    <artifactId>dropwizard-guice</artifactId>
+		    <version>${dropwizard.hubspot.version}</version>
+		</dependency>        
 		<!-- google guice -->
         <dependency>
             <groupId>com.google.inject</groupId>

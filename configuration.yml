@@ -1,7 +1,8 @@
 http:
   port: 9500
   adminPort: 9501
-  rootPath: /service/*  # Default is /*
+  rootPath: /service/*
 
 recaptcha:
-  api_key: ""
+  apiKey: 6Le_bSYTAAAAAHWIMtop4O6RRO6tx3qR0G75uVpB
+  

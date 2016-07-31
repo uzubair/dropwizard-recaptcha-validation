@@ -24,8 +24,8 @@ public class BaseModule extends AbstractModule {
 	 */
 	@Provides
 	@Singleton
-	public ObjectMapper providesObjectMapper(Environment environment) {
-		return environment.getObjectMapper();
+	public ObjectMapper providesObjectMapper() {
+		return new ObjectMapper();
 	}
 	
 	@Provides

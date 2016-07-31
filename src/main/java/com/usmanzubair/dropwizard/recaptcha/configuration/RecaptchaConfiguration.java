@@ -8,7 +8,7 @@ import io.dropwizard.Configuration;
 
 public class RecaptchaConfiguration extends Configuration {
 	@NotNull
-	@JsonProperty("api_key")
+	@JsonProperty
 	private String apiKey;
 	
 	public String getApiKey() {
