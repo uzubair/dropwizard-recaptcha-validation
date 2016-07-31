@@ -1,0 +1,7 @@
+http:
+  port: 9500
+  adminPort: 9501
+  rootPath: /service/*  # Default is /*
+
+recaptcha:
+  api_key: ""
