@@ -17,17 +17,17 @@ public class WebServiceApplication extends Application<WebServiceAppConfiguratio
     }
 	
     @Override
-    public void initialize(Bootstrap<WebServiceAppConfiguration> bootstrap) {
+    public void initialize(Bootstrap<WebServiceAppConfiguration> bootstrap) {  	
         // Google Guice will register bindings in BaseModule and will package scan
         // com.usmanzubair to automatically find and register resources, and health checks
         guiceBundle = GuiceBundle.<WebServiceAppConfiguration> newBuilder()
                 .enableAutoConfig(getClass().getPackage().getName())
                 .addModule(new BaseModule())
                 .build();
-        bootstrap.addBundle(guiceBundle);	
+        bootstrap.addBundle(guiceBundle);
         
         // asset bundle to serve static resources.
-        final AssetsBundle assetBundle = new AssetsBundle("/assets/", "/assets/", "");
+        final AssetsBundle assetBundle = new AssetsBundle("/assets/", "/", "index.html");
         bootstrap.addBundle(assetBundle);
     }
     

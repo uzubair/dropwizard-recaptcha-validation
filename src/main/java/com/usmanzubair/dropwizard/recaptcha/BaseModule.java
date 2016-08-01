@@ -9,8 +9,6 @@ import com.usmanzubair.dropwizard.recaptcha.configuration.WebServiceAppConfigura
 import com.usmanzubair.dropwizard.recaptcha.service.RecaptchaService;
 import com.usmanzubair.dropwizard.recaptcha.service.RecaptchaServiceImpl;
 
-import io.dropwizard.setup.Environment;
-
 public class BaseModule extends AbstractModule {
 
 	@Override

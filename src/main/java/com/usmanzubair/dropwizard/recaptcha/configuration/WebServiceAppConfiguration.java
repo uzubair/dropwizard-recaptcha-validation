@@ -9,24 +9,12 @@ import io.dropwizard.Configuration;
 
 public class WebServiceAppConfiguration extends Configuration {
 	/**
-	 * Http settings defined in configuration.yml file
-	 */
-	@Valid
-	@NotNull
-	@JsonProperty("http")
-	private final HttpConfiguration httpConfiguration = new HttpConfiguration();
-	
-	/**
 	 * Recaptcha settings defined in configuration.yml file
 	 */
 	@Valid
 	@NotNull
 	@JsonProperty("recaptcha")
 	private final RecaptchaConfiguration recaptchaConfiguration = new RecaptchaConfiguration();
-	
-	public HttpConfiguration getHttpConfiguration() {
-		return httpConfiguration;
-	}
 	
 	public RecaptchaConfiguration getRecaptchaConfiguration() {
 		return recaptchaConfiguration;

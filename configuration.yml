@@ -1,8 +1,14 @@
-http:
-  port: 8080
-  adminPort: 8081
-  rootPath: /*
+server:
+  # Serve APIs on /api/ and Static Assets on root URL i.e. /
+  rootPath: '/api/*'
+  applicationConnectors:
+      - type: http
+        port: 8080
+  adminConnectors:
+      - type: http
+        port: 8081
 
 recaptcha:
-  apiKey: 6Le_bSYTAAAAAHWIMtop4O6RRO6tx3qR0G75uVpB
+  verificationServerUrl: 'https://www.google.com/recaptcha/api/siteverify'
+  apiKey: # Add Recaptcha secret API key
   

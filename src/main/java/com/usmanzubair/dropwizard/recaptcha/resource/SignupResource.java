@@ -13,7 +13,7 @@ import com.google.inject.Inject;
 import com.usmanzubair.dropwizard.recaptcha.configuration.RecaptchaConfiguration;
 import com.usmanzubair.dropwizard.recaptcha.service.RecaptchaService;
 
-@Path("/api/v1")
+@Path("/v1")
 public class SignupResource {
 	private RecaptchaService recaptchaService;
 	

@@ -24,8 +24,6 @@ import com.google.inject.Inject;
 import com.usmanzubair.dropwizard.recaptcha.configuration.RecaptchaConfiguration;
 
 public class RecaptchaServiceImpl implements RecaptchaService {
-
-	private static final String RECAPTCHA_VERIFICATION_SERVER_URL = "https://www.google.com/recaptcha/api/siteverify";
 	
 	private final RecaptchaConfiguration recaptchaConfiguration;
 	private final ObjectMapper objectMapper;
@@ -44,7 +42,7 @@ public class RecaptchaServiceImpl implements RecaptchaService {
         }
         
         final HttpClient httpClient = HttpClients.createDefault();
-        final HttpPost request = new HttpPost(RECAPTCHA_VERIFICATION_SERVER_URL);
+        final HttpPost request = new HttpPost(recaptchaConfiguration.getVerificationServerUrl());
         HttpResponse response = null;
 
         try {
