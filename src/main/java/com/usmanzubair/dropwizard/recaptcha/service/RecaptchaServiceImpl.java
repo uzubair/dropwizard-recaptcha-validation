@@ -34,10 +34,14 @@ public class RecaptchaServiceImpl implements RecaptchaService {
 		this.objectMapper = objectMapper;
 	}
 	
+	/**
+	 * Verifies User's response to a reCAPTCHA challenge
+	 * @param recaptcha client side user response token provided by the reCAPTCHA
+	 * @return false if the value is not verified by google servers, true otherwise
+	 */
 	@Override
 	public boolean verifyRecaptcha(String recaptcha) {
         if (StringUtils.isBlank(recaptcha)) {
-            // TODO: Add logging
             return false;
         }
         
@@ -61,10 +65,8 @@ public class RecaptchaServiceImpl implements RecaptchaService {
                 return recaptchaResponse.isSuccess();
             }
 
-            // TODO: Add logging
             return false;
         } catch (final Exception e) {
-            //TODO: Add logging
             return false;
         } finally {
             request.releaseConnection();
@@ -77,11 +79,8 @@ public class RecaptchaServiceImpl implements RecaptchaService {
     static class RecaptchaResponse {
 
         private final boolean success;
-
         private final String challengeTimeStamp;
-
         private final String hostname;
-
         private final List<String> errorCodes;
 
         @JsonCreator
