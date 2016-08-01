@@ -27,6 +27,13 @@
             <artifactId>dropwizard-client</artifactId>
             <version>${dropwizard.version}</version>
         </dependency>
+        <!-- serving static resources -->
+		<dependency>
+			<groupId>io.dropwizard</groupId>
+			<artifactId>dropwizard-assets</artifactId>
+			<version>${dropwizard.version}</version>
+		</dependency>
+		<!-- dropwizard guice extension -->
 		<dependency>
 		    <groupId>com.hubspot.dropwizard</groupId>
 		    <artifactId>dropwizard-guice</artifactId>
@@ -56,7 +63,7 @@
                 <artifactId>exec-maven-plugin</artifactId>
                 <version>1.2.1</version>
                 <configuration>
-                    <mainClass>com.usmanzubair.WebService</mainClass>
+                    <mainClass>com.usmanzubair.WebServiceApplication</mainClass>
                     <arguments>
                         <argument>server</argument>
                         <argument>configuration.yml</argument>

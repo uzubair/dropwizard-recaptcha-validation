@@ -4,6 +4,7 @@ import com.hubspot.dropwizard.guice.GuiceBundle;
 import com.usmanzubair.dropwizard.recaptcha.configuration.WebServiceAppConfiguration;
 
 import io.dropwizard.Application;
+import io.dropwizard.assets.AssetsBundle;
 import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
 
@@ -24,6 +25,10 @@ public class WebServiceApplication extends Application<WebServiceAppConfiguratio
                 .addModule(new BaseModule())
                 .build();
         bootstrap.addBundle(guiceBundle);	
+        
+        // asset bundle to serve static resources.
+        final AssetsBundle assetBundle = new AssetsBundle("/assets/", "/assets/", "");
+        bootstrap.addBundle(assetBundle);
     }
     
 	@Override

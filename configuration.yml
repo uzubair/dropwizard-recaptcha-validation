@@ -1,7 +1,7 @@
 http:
-  port: 9500
-  adminPort: 9501
-  rootPath: /service/*
+  port: 8080
+  adminPort: 8081
+  rootPath: /*
 
 recaptcha:
   apiKey: 6Le_bSYTAAAAAHWIMtop4O6RRO6tx3qR0G75uVpB
